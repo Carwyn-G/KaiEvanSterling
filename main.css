@@ -37,10 +37,99 @@ header {
     height: 8rem;
 }
 
-.navigation {
-	max-width: 75rem;
-	margin: 1em;
+nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
 }
+
+.topnav {
+	display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.topnav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topnav li {
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+.topnav button {
+    background-color: var(--darkest);
+    color: var(--teal);
+    font-family: praxis-next, sans-serif;
+    font-weight: 700;
+    font-size: x-large;
+    margin: 0;
+    padding: 0;
+    max-height: 2em;
+}
+
+.hamburger {
+    display: none;
+}
+
+.topnav img {
+    max-width: 2em;
+}
+
+ul a:link,
+ul a:visited {
+    font-family: praxis-next, sans-serif;
+    font-weight: 700;
+    font-size: x-large;
+    color: var(--teal);
+    text-decoration: none;
+}
+
+ul a:hover,
+ul a:active {
+    color: var(--pop);
+}
+
+@media screen and (max-width: 700px) {
+    .default ul {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+
+    .expanded ul {
+        position: absolute;
+        right: 0;
+        top: 8rem;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--darkest);
+        z-index: 2;
+    }
+    .expanded ul button {
+        background-color: var(--darkest);
+        color: var(--teal);
+        font-family: praxis-next, sans-serif;
+        font-weight: 700;
+        font-size: x-large;
+        margin: 0;
+        padding: 0;
+        max-height: 2em;
+        border-radius: 0;
+    }
+    .expanded li {
+        margin-bottom: 1em;
+    }
+}
+
 
 
 /* home page */
@@ -62,7 +151,7 @@ header {
     width: 32rem;
     position: absolute;
     top:2rem;
-    left:4rem;
+    left:2rem;
     background-color: var(--translteal);
     border-radius: 2em;
     overflow: hidden;
@@ -77,12 +166,11 @@ header {
 
 h1 {
     font-family: regulator-nova, sans-serif;
-    font-weight: 100;
+    font-weight: 200;
+    font-size: 28pt;
     text-transform: uppercase;
     text-align: center;
-    margin: 2em;
-    margin-bottom: 1em;
-    margin-top: 1em;
+    margin: 1em;
     color: var(--darkest);
 }
 
@@ -102,7 +190,7 @@ button {
     font-family: praxis-next, sans-serif;
     font-weight: 700;
     font-size: larger;
-    padding: .5em 1em;
+    padding: .5em 2em;
     margin-bottom: 1em;
     box-shadow: 2px 2px 2px var(--darkest);
     cursor: pointer;
