@@ -11,3 +11,15 @@ function hamburger() {
     document.getElementById("menu-icon").alt = "click to open the menu"
     }
 } 
+
+function expandExplore() {
+  let y = document.getElementById("submenu");
+  if (y.className === "submenu expandable") {
+    y.className = "submenu expanded-explore"
+    document.getElementById("arrow").id = "arrowup"
+  }
+  else {
+    y.className = "submenu expandable"
+    document.getElementById("arrowup").id = "arrow"
+  }
+}

@@ -17,8 +17,14 @@
                 <ul>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><button>Explore <img src="images/arrow down.png" width="20"> </button></li>
-
+                    <li><button onclick="expandExplore()">Explore <img src="images/arrow down.png" id="arrow"></button>
+                        <div id="submenu" class="submenu expandable">
+                            <ul>
+                                <li class="explore"><a href="world.html">World</a></li>
+                                <li class="explore"><a href="characters.html">Characters</a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </nav>
