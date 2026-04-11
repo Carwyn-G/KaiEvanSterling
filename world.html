@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>World - Kai Evan Sterling</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/iyj8vmn.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><img src="images/KES-logo.svg" alt="Kai Evan Sterling" class="svg-logo"/></a>
+            <div class="topnav default" id="navbar">
+                <button class="hamburger" onclick="hamburger()"><img id="menu-icon" src="images/hamburger.png" alt="click to open the menu"></button>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button onclick="expandExplore()">Explore <img src="images/arrow down.png" id="arrow"></button>
+                        <div id="submenu" class="submenu expandable">
+                            <ul>
+                                <li class="explore"><a href="world.html">World</a></li>
+                                <li class="explore"><a href="characters.html">Characters</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 </body>
 </html>

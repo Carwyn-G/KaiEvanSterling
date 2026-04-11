@@ -23,3 +23,48 @@ function expandExplore() {
     document.getElementById("arrowup").id = "arrow"
   }
 }
+
+emailjs.init("cvuxIRfkZCNaMnQcQ");
+
+const contactbtn = document.getElementById('contact-btn');
+
+document.getElementById('contact-form')
+  .addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    contactbtn.value = 'Sending...';
+
+    const serviceID = 'default_service';
+    const templateID = 'template_ujjlgme';
+
+    emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+        contactbtn.value = 'Send Email';
+        window.open("contactthanks.html", "_self");
+      }, (err) => {
+        contactbtn.value = 'Send Email';
+        alert(JSON.stringify(err));
+      });
+  });
+
+
+const maillistbtn = document.getElementById('maillist-btn');
+
+document.getElementById('maillist-form')
+  .addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    maillistbtn.value = 'Sending...';
+
+    const serviceID = 'default_service';
+    const templateID = 'template_wxz0all';
+
+    emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+        maillistbtn.value = 'Send Email';
+        window.open("signupthanks.html", "_self");
+      }, (err) => {
+        maillistbtn.value = 'Send Email';
+        alert(JSON.stringify(err));
+      });
+});
