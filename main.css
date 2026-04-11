@@ -11,25 +11,22 @@
 
 body {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     background: var(--darkteal);
     background: linear-gradient(180deg,var(--teal) 0%, var(--lightteal) 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    position: relative;
 }
 
 main {
-    flex-shrink: 1;
-    flex-grow: 1;
+    padding-bottom: 8rem;
 }
 
 /* Nav */
 header {
-    flex-shrink: 0;
-    flex-grow: 0;
+    /* flex-shrink: 0;
+    flex-grow: 0; */
     background-color: var(--darkest);
     display: flex;
     align-items: end;
@@ -182,16 +179,30 @@ ul a:active {
 
 /* footer */
 footer {
-    flex-shrink: 0;
-    flex-grow: 0;
+    background-color: var(--darkteal);
     z-index: 1;
     width: 100%;
-    background-color: var(--darkteal);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer p {
     color: var(--lightest);
     margin: 1em;
+}
+.maillist {
+    display: flex;
+    flex-direction: column;
+}
+
+.join-form {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
 }
 
 footer h3 {
@@ -199,20 +210,46 @@ footer h3 {
     font-family: transducer-variable, sans-serif;
     font-weight: 600;
     font-size: large;
-    margin: 1em;
+    margin: 0;
+    margin-left: 1em;
 }
 
-label {
+footer label {
     color: var(--lightest);
     font-family: transducer-variable, sans-serif;
     font-weight: 400;
     font-size: medium;
+    margin-left: 1em;
+}
+.socials {
     margin: 1em;
+    display: flex;
+    flex-direction: row;
+}
+
+.icon {
+    height: 2em;
+    margin-right: 1em;
+}
+
+@media screen and (max-width: 700px) {
+    .join-form {
+        flex-direction: column;
+    }
+    footer h3 {
+        margin: 1em;
+    }
+    footer label {
+        margin:0;
+    }
+    footer button {
+        margin: 1em;
+    }
 }
 
 /* home page */
 .book-display {
-    /* position: relative; */
+    position: absolute;
     width: 100%;
 }
 .cover-art {
@@ -230,7 +267,7 @@ label {
 }
 
 .bookshelf {
-    width: 32rem;
+    width: calc(700px - 4rem);
     position: absolute;
     top:2rem;
     left:2rem;
@@ -238,6 +275,12 @@ label {
     border-radius: 2em;
     overflow: hidden;
     box-shadow: 2px 2px 4px var(--darkteal);
+}
+
+@media screen and (max-width: 700px) {
+    .bookshelf {
+        width: calc(100vw - 4rem);
+    }
 }
 
 .bookshelf-contents {
