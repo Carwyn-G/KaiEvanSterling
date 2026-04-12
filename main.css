@@ -29,6 +29,7 @@ header {
     display: flex;
     align-items: end;
     justify-content: space-between;
+    z-index: 15;
 }
 
 .logo {
@@ -78,6 +79,10 @@ nav {
     max-height: 2em;
 }
 
+.topnav button:hover {
+    color: var(--pop);
+}
+
 .hamburger {
     display: none;
 }
@@ -116,7 +121,10 @@ nav {
     margin: 0;
     text-transform: none;
 }
-
+#submenu a:hover, 
+#submenu a:active {
+    color: var(--pop);
+}
 
 .topnav img {
     max-width: 2em;
@@ -291,13 +299,7 @@ input::placeholder {
 }
 
 #MIF-cover {
-    max-height: 85vh;
-}
-
-#MIF-cover img {
-    margin-top: -250px;
     margin-bottom: 50px;
-    min-width: 0;
 }
 
 #mail-form {
