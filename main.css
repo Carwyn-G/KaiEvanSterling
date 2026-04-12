@@ -212,7 +212,7 @@ footer h3 {
     margin-left: 1em;
 }
 
-footer label {
+label {
     color: var(--lightest);
     font-family: transducer-variable, sans-serif;
     font-weight: 400;
@@ -220,7 +220,7 @@ footer label {
     margin-left: 1em;
 }
 
-footer input {
+input {
     padding: .5em;
     margin: 0;
     display: inline-block;
@@ -230,7 +230,10 @@ footer input {
     box-sizing: border-box;
     background-color: var(--lightteal);
     border-color: var(--darkest);
-    color: var(--darkest);
+}
+
+input::placeholder {
+    color: var(--darkteal);
 }
 
 .socials {
@@ -284,7 +287,30 @@ footer input {
 }
 
 #MIF-book {
-    background: linear-gradient(180deg,var(--teal) 0%, var(--lightteal) 100%);
+    background: linear-gradient(180deg,var(--darkest) 0%, var(--darkteal) 100%);
+}
+
+#MIF-cover {
+    max-height: 85vh;
+}
+
+#MIF-cover img {
+    margin-top: -250px;
+    margin-bottom: 50px;
+    min-width: 0;
+}
+
+#mail-form {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    margin-left: 2em;
+}
+
+#mail-input {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
 }
 
 .cover-art {
@@ -335,6 +361,11 @@ footer input {
     direction: ltr;
 }
 
+.synopsis {
+    display: flex;
+    flex-direction: column;
+}
+
 h1 {
     font-family: regulator-nova, sans-serif;
     font-weight: 200;
@@ -367,6 +398,21 @@ button {
     margin-bottom: 1em;
     box-shadow: 2px 2px 2px var(--darkest);
     cursor: pointer;
+}
+
+#mail-form label {
+    color: var(--darkest);
+    margin-left: 0;
+    }
+
+#mail-form input {
+    background-color: var(--lightteal);
+    margin-left: 1em;
+}
+
+#mail-form button {
+    margin-top: 1em;
+    max-width: 150px;
 }
 
 .book-selector {
