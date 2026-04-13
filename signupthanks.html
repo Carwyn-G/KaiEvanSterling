@@ -31,22 +31,28 @@
             </div>
         </nav>
     </header>
-    <main>
-        <h1>Thank You!</h1>
-        <p>I'm thrilled to have another reader interested in my stories. Now that you've signed up you'll receive news updates and maybe even sneak peeks at unreleased content.</p>
-        <p>For now, feel free to keep exploring the site, and I hope you keep reading.</p>
+    <main class="thanks">
+        <div class="thank-you">
+            <h1>Thank You!</h1>
+            <p>I'm thrilled to have another reader interested in my stories. Now that you've signed up you'll receive news updates and maybe even sneak peeks at unreleased content.</p>
+            <p>For now, feel free to keep exploring the site, and I hope you keep reading.</p>
+        </div>
     </main>
     <footer>
-        <div>
+        <div class="maillist">
             <p>Stay up to date on all the latest news from Kai Evan Sterling</p>
-            <div>
+            <div class="join-form">
                 <h3>Join the Mailing List</h3>
                 <form id="maillist-form">
                     <label for="email">Email:</label>
-                    <input type="email" name="email" required/>
+                    <input placeholder="enter your email here" type="email" name="email" required/>
                     <button type="submit" id="maillist-btn">Submit</button>
                 </form>
             </div>
+        </div>
+        <div class="socials">
+            <a target="_blank" href="https://bsky.app/profile/kaievansterling.bsky.social"><img src = "images/Bluesky-icon.svg" class="icon"></a>
+            <a target="_blank" href="https://www.instagram.com/kaievansterling/"><img src="images/instagram-icon.svg" class="icon"></a>
         </div>
     </footer>
 </body>

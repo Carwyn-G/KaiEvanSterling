@@ -20,6 +20,7 @@ body {
 main {
     width: 100%;
     height: auto;
+    background: linear-gradient(180deg,var(--teal) 0%, var(--lightteal) 100%);
 }
 
 /* Nav */
@@ -145,7 +146,7 @@ ul a:active {
     color: var(--pop);
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 725px) {
     .default ul {
         display: none;
     }
@@ -225,6 +226,9 @@ label {
     font-family: transducer-variable, sans-serif;
     font-weight: 400;
     font-size: medium;
+}
+
+#maillist-form label {
     margin-left: 1em;
 }
 
@@ -255,18 +259,23 @@ input::placeholder {
     margin-right: 1em;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 740px) {
     .join-form {
         flex-direction: column;
     }
     footer h3 {
         margin: 1em;
     }
-    footer label {
+    #maillist-form label {
         margin:0;
     }
+    #maillist-form input {
+        margin-bottom: 1em;
+    }
+
     footer button {
         margin: 1em;
+        margin-top: 0;
     }
     footer p {
         margin-bottom: 0;
@@ -309,11 +318,6 @@ input::placeholder {
     margin-left: 2em;
 }
 
-#mail-input {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-}
 
 .cover-art {
     display: grid;
@@ -409,7 +413,8 @@ button {
 
 #mail-form input {
     background-color: var(--lightteal);
-    margin-left: 1em;
+    margin-top: 1em;
+    max-width: 150px;
 }
 
 #mail-form button {
@@ -452,8 +457,133 @@ button {
 .selected {
     border-radius: 0;
     height: 100%;
+    width: 105%;
     background-color: var(--transteal);
     box-shadow: 2px 2px 2px var(--darkest);
     padding: 0;
     z-index: 2;
+}
+
+/* About Page */
+.about {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    background: linear-gradient(180deg,var(--darkest) 0%, var(--darkteal) 100%);
+}
+.author-image {
+    background-color: var(--lightteal);
+    padding: 4%;
+    margin: 12%;
+    height: fit-content;
+    transform: rotate(-16deg);
+    padding-bottom: 4em;
+    box-shadow: 4px 4px 8px var(--darkest);
+}
+.author-image img{
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    box-shadow: 2px 2px 4px var(--darkest);
+}
+.author-blurb {
+    background-color: var(--translteal);
+    margin: 2em;
+    border-radius: 4px;
+    box-shadow: 4px 4px 8px var(--darkest);
+}
+
+@media screen and (max-width: 700px) {
+    .about {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-bottom: 2rem;
+    }
+    .author-image {
+        margin-top: 2%;
+        margin-bottom: 6%;
+    }
+    .author-blurb {
+        margin-bottom: 1em;
+    }
+}
+
+/* Contact Page */
+#contact-page {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(180deg,var(--teal) 0%, var(--lightteal) 100%);
+}
+
+.contact-blurb {
+    padding: 2rem;
+    max-width: 40%;
+}
+
+.contact-blurb p {
+    text-align: center;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 2rem;
+    background-color: var(--darkteal);
+    border-radius: 4px;
+    box-shadow: 4px 4px 8px var(--darkest);
+    min-width: 40%;
+}
+
+#contact-form label {
+    margin-left: 0;
+}
+
+#contact-form input {
+    margin-bottom: 1rem;
+}
+
+textarea {
+    padding: .5em;
+    margin: 0;
+    margin-bottom: 1rem;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px var(--darkest) inset;
+    box-sizing: border-box;
+    background-color: var(--lightteal);
+    border-color: var(--darkest);
+    height: 8rem;
+}
+
+@media screen and (max-width: 700px) {
+    #contact-page {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-blurb {
+        padding-bottom: 0;
+        max-width: none;
+    }
+    .contact-blurb h1 {
+        margin-bottom: .5em;
+    }
+    #contact-form {
+        margin-top: 0;
+    }
+}
+
+/* thank you pages */
+.thanks {
+    display: flex;
+    justify-content: center;
+}
+.thank-you {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+}
+
+.thank-you p {
+    text-align: center;
 }

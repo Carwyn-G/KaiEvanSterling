@@ -31,27 +31,37 @@
         </nav>
     </header>
     <main id="contact-page">
+        <div class = "contact-blurb">
+            <h1>Get in Touch</h1>
+            <p>If you have any questions or comments, you can send them to the author by filling out the form.</p>
+        </div>
         <form id="contact-form">
             <label for="name">Name:</label>
-            <input type="text" name="name" required />
+            <input type="text" name="name" id="name" required>
             <label for="email">Email:</label>
-            <input type="email" name="email" required />
+            <input type="text" name="email" id="email" required>
+            <label for="subject">Subject:</label>
+            <input type="text" name="subject" id="subject" required>
             <label for="message">Message:</label>
-            <textarea name="message" required></textarea>
+            <textarea name="message" id="message" required></textarea>
             <button type="submit" id="contact-btn">Send</button>
         </form>
     </main>
     <footer>
-        <div>
+        <div class="maillist">
             <p>Stay up to date on all the latest news from Kai Evan Sterling</p>
-            <div>
+            <div class="join-form">
                 <h3>Join the Mailing List</h3>
                 <form id="maillist-form">
                     <label for="email">Email:</label>
-                    <input type="email" name="email" required/>
+                    <input placeholder="enter your email here" type="email" name="email" required/>
                     <button type="submit" id="maillist-btn">Submit</button>
                 </form>
             </div>
+        </div>
+        <div class="socials">
+            <a target="_blank" href="https://bsky.app/profile/kaievansterling.bsky.social"><img src = "images/Bluesky-icon.svg" class="icon"></a>
+            <a target="_blank" href="https://www.instagram.com/kaievansterling/"><img src="images/instagram-icon.svg" class="icon"></a>
         </div>
     </footer>
 </body>

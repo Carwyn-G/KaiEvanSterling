@@ -36,7 +36,7 @@ if (document.getElementById("contact-page") != null){
       contactbtn.value = 'Sending...';
 
       const serviceID = 'default_service';
-      const templateID = 'template_ujjlgme';
+      const templateID = 'template_8wbwvil';
 
       emailjs.sendForm(serviceID, templateID, this)
         .then(() => {
@@ -136,10 +136,8 @@ let mifContents = `
         <p>Felri's made it through the wedding. He thought that would be enough, but now that he's crowned King, the real challenges are only beginning.</p>
         <p>Join the mailing list to get the latest updates on when this book will be available!</p>
         <form id="mail-form">
-          <div id="mail-input">
-            <label for="email">Email:</label>
-            <input placeholder="enter your email here" type="email" name="email" required/>
-          </div>
+          <label for="email">Email:</label>
+          <input placeholder="enter your email here" type="email" name="email" required/>
           <button type="submit" id="mail-btn">Submit</button>
         </form>
       </div>
