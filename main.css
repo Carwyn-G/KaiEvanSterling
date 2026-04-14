@@ -30,7 +30,7 @@ header {
     display: flex;
     align-items: end;
     justify-content: space-between;
-    z-index: 15;
+    z-index: 1;
 }
 
 .logo {
@@ -71,7 +71,7 @@ nav {
 .topnav button {
     background-color: var(--darkest);
     color: var(--teal);
-    font-family: praxis-next, sans-serif;
+    font-family: transducer-variable, sans-serif;
     font-weight: 700;
     font-size: x-large;
     text-transform: uppercase;
@@ -115,7 +115,7 @@ nav {
 
 #submenu a:link,
 #submenu a:visited {
-    font-family: praxis-next, sans-serif;
+    font-family: transducer-variable, sans-serif;
     font-weight: 600;
     font-size: x-large;
     color: var(--lightest);
@@ -133,7 +133,7 @@ nav {
 
 ul a:link,
 ul a:visited {
-    font-family: praxis-next, sans-serif;
+    font-family: transducer-variable, sans-serif;
     font-weight: 700;
     font-size: x-large;
     color: var(--teal);
@@ -167,7 +167,7 @@ ul a:active {
     .expanded ul button {
         background-color: var(--darkest);
         color: var(--teal);
-        font-family: praxis-next, sans-serif;
+        font-family: transducer-variable, sans-serif;
         font-weight: 700;
         font-size: x-large;
         margin: 0;
@@ -188,14 +188,15 @@ ul a:active {
 /* footer */
 footer {
     background-color: var(--darkteal);
-    z-index: 1;
     width: 100%;
     padding-top: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    z-index: 3;
 }
+
 
 footer p {
     color: var(--lightest);
@@ -246,6 +247,10 @@ input {
 
 input::placeholder {
     color: var(--darkteal);
+}
+
+.small {
+    font-size: small;
 }
 
 .socials {
@@ -397,7 +402,7 @@ button {
     color: var(--lightest);
     border: none;
     border-radius: 500px;
-    font-family: praxis-next, sans-serif;
+    font-family: transducer-variable, sans-serif;
     font-weight: 700;
     font-size: larger;
     padding: .5em 2em;
@@ -586,4 +591,34 @@ textarea {
 
 .thank-you p {
     text-align: center;
+}
+
+/* Characters & World */
+
+.explore-page {
+    background: linear-gradient(180deg,var(--lightest) 0%, var(--pop) 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    background-color: var(--translteal);
+    display: flex;
+    flex-direction: row;
+    margin: 4rem;
+    margin-top: 0;
+    box-shadow: 4px 4px 4px var(--darkest);
+}
+
+.card img {
+    max-height: 50vh;
+    margin: 2em;
+    background-color: var(--lightest);
+    box-shadow: 4px 4px 4px var(--darkest);
+}
+
+h2 {
+    font-family: transducer-variable, sans-serif;
+    color: var(--darkest);
+    margin-left: 2rem;
 }
