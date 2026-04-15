@@ -294,14 +294,12 @@ input::placeholder {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
     direction: rtl;
-    /* width: 100vw;
-    overflow: hidden;
-    justify-items: end;
-    max-width: 100vw; */
+    z-index: -2;
 }
 
 #CIW-book {
     background: linear-gradient(180deg,var(--teal) 0%, var(--lightteal) 100%);
+    z-index: -2;
 }
 
 #KIW-book {
@@ -353,6 +351,7 @@ input::placeholder {
     box-shadow: 4px 4px 6px var(--darkteal);
     grid-area: 1 / 1 / span 1 /span 1;
     justify-self: end;
+    z-index: 5;
     }
 
 @media screen and (max-width: 700px) {
@@ -622,3 +621,150 @@ h2 {
     color: var(--darkest);
     margin-left: 2rem;
 }
+
+/* Animations */
+    /* CIW */
+    @keyframes ciwBack {
+        0% {transform: scaleX(120%);}
+        50% {transform: scaleX(105%);}
+        100% {transform: scaleX(120%);}
+    }
+
+    #CIW-back {
+        animation-name: ciwBack;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        z-index: 0;
+    }
+
+    @keyframes ciwFront {
+        0% {transform: scaleX(100%);}
+        50% {transform: scaleX(110%);}
+        100% {transform: scaleX(100%);}
+    }
+
+    #CIW-front {
+        animation-name: ciwFront;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        z-index: 4;
+    }
+
+    #CIW-one {
+        z-index: 1;
+    }
+
+
+    #CIW-two {
+        z-index: 2;
+    }
+
+    #CIW-three {
+        z-index: 3;
+    }
+
+    /* KIW */
+    @keyframes kiwBack {
+        0% {transform: scaleX(120%);}
+        50% {transform: scaleX(105%);}
+        100% {transform: scaleX(120%);}
+    }
+
+    #KIW-back {
+        animation-name: kiwBack;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        z-index: 0;
+    }
+    
+    @keyframes kiwOne {
+        0% {transform: scaleX(100%);}
+        50% {transform: scaleX(110%);}
+        100% {transform: scaleX(100%);}
+    }
+
+    #KIW-one {
+        animation-name: kiwOne;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        z-index: 1;
+    }
+
+    #KIW-two {
+        z-index: 2;
+    }
+
+    #KIW-three {
+        z-index: 3;
+    }
+
+    #KIW-front {
+        z-index: 4;
+    }
+
+    /* MIF */
+        @keyframes mifBack {
+        0% {transform: translateX(0px);}
+        50% {transform: translateX(-50px);}
+        100% {transform: translateX(0px);}
+    }
+
+    #MIF-back {
+        animation-name: mifBack;
+        animation-duration: 12s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        z-index: 0;
+    }
+
+    @keyframes mifOne {
+        0% {transform: translateX(0px);}
+        50% {transform: translateX(50px);}
+        100% {transform: translateX(0px);}
+    }
+
+    #MIF-one {
+        animation-name: mifOne;
+        animation-duration: 12s;
+        animation-delay: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        z-index: 1;
+    }
+
+
+    @keyframes mifFront {
+        0% {transform: translateX(0px);}
+        50% {transform: translateX(50px);}
+        100% {transform: translateX(0px);}
+    }
+
+    #MIF-front {
+        animation-name: mifFront;
+        animation-duration: 12s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        z-index: 4;
+    }
+    @keyframes mifThree {
+        0% {transform: translateX(0px);}
+        50% {transform: translateX(-50px);}
+        100% {transform: translateX(0px);}
+    }
+
+    #MIF-three {
+        animation-name: mifThree;
+        animation-duration: 12s;
+        animation-delay: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        z-index: 3;
+    }
+
+    #MIF-two {
+        z-index: 2;
+    }
