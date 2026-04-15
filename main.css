@@ -1,12 +1,12 @@
 :root {
-	--lightest: #f3dfbf;
-	--darkest: #0a1128;
 	--darkteal: #096b72;
-	--teal: #65bfbf;
+	--midteal: #65bfbf;
 	--lightteal: #bcebeb;
-    --pop: #89043d;
+	--midnight: #0a1128;
+    --berry: #89043d;    
+    --ivory: #f3dfbf;
     --translteal: rgba(188, 235, 235, .75);
-    --transteal: rgba(101, 191, 191, .75);
+    --transmidteal: rgba(101, 191, 191, .75);
 }
 
 body {
@@ -20,13 +20,14 @@ body {
 main {
     width: 100%;
     height: auto;
-    background: linear-gradient(180deg,var(--teal) 0%, var(--lightteal) 100%);
+    background: linear-gradient(180deg,var(--midteal) 0%, var(--lightteal) 100%);
+    overflow: hidden;
 }
 
 /* Nav */
 header {
     height: 8rem;
-    background-color: var(--darkest);
+    background-color: var(--midnight);
     display: flex;
     align-items: end;
     justify-content: space-between;
@@ -69,8 +70,8 @@ nav {
 }
 
 .topnav button {
-    background-color: var(--darkest);
-    color: var(--teal);
+    background-color: var(--midnight);
+    color: var(--midteal);
     font-family: transducer-variable, sans-serif;
     font-weight: 700;
     font-size: x-large;
@@ -81,7 +82,7 @@ nav {
 }
 
 .topnav button:hover {
-    color: var(--pop);
+    color: var(--berry);
 }
 
 .hamburger {
@@ -110,7 +111,7 @@ nav {
     top: 8rem;
     right: 0;
     padding: 0;
-    background-color: var(--darkest);
+    background-color: var(--midnight);
 }
 
 #submenu a:link,
@@ -118,13 +119,13 @@ nav {
     font-family: transducer-variable, sans-serif;
     font-weight: 600;
     font-size: x-large;
-    color: var(--lightest);
+    color: var(--ivory);
     margin: 0;
     text-transform: none;
 }
 #submenu a:hover, 
 #submenu a:active {
-    color: var(--pop);
+    color: var(--berry);
 }
 
 .topnav img {
@@ -136,14 +137,14 @@ ul a:visited {
     font-family: transducer-variable, sans-serif;
     font-weight: 700;
     font-size: x-large;
-    color: var(--teal);
+    color: var(--midteal);
     text-decoration: none;
     text-transform: uppercase;
 }
 
 ul a:hover,
 ul a:active {
-    color: var(--pop);
+    color: var(--berry);
 }
 
 @media screen and (max-width: 725px) {
@@ -161,12 +162,12 @@ ul a:active {
         margin: 0;
         display: flex;
         flex-direction: column;
-        background-color: var(--darkest);
+        background-color: var(--midnight);
         z-index: 2;
     }
     .expanded ul button {
-        background-color: var(--darkest);
-        color: var(--teal);
+        background-color: var(--midnight);
+        color: var(--midteal);
         font-family: transducer-variable, sans-serif;
         font-weight: 700;
         font-size: x-large;
@@ -199,7 +200,7 @@ footer {
 
 
 footer p {
-    color: var(--lightest);
+    color: var(--ivory);
     margin: 1em;
 }
 .maillist {
@@ -214,7 +215,7 @@ footer p {
 }
 
 footer h3 {
-    color: var(--lightest);
+    color: var(--ivory);
     font-family: transducer-variable, sans-serif;
     font-weight: 600;
     font-size: large;
@@ -223,7 +224,7 @@ footer h3 {
 }
 
 label {
-    color: var(--lightest);
+    color: var(--ivory);
     font-family: transducer-variable, sans-serif;
     font-weight: 400;
     font-size: medium;
@@ -237,12 +238,14 @@ input {
     padding: .5em;
     margin: 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 4px;
-    box-shadow: 2px 2px 4px var(--darkest) inset;
+    box-shadow: 2px 2px 4px var(--midnight) inset;
     box-sizing: border-box;
     background-color: var(--lightteal);
-    border-color: var(--darkest);
+    border-color: var(--midnight);
+    font-family: transducer-variable, sans-serif;
+    font-size: small;
 }
 
 input::placeholder {
@@ -251,6 +254,7 @@ input::placeholder {
 
 .small {
     font-size: small;
+    margin-top: 0;
 }
 
 .socials {
@@ -264,7 +268,7 @@ input::placeholder {
     margin-right: 1em;
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 800px) {
     .join-form {
         flex-direction: column;
     }
@@ -298,16 +302,15 @@ input::placeholder {
 }
 
 #CIW-book {
-    background: linear-gradient(180deg,var(--teal) 0%, var(--lightteal) 100%);
-    z-index: -2;
+    background: linear-gradient(180deg,var(--midteal) 0%, var(--lightteal) 100%);
 }
 
 #KIW-book {
-    background: linear-gradient(180deg,var(--lightest) 0%, var(--pop) 100%);
+    background: linear-gradient(180deg,var(--ivory) 0%, var(--berry) 100%);
 }
 
 #MIF-book {
-    background: linear-gradient(180deg,var(--darkest) 0%, var(--darkteal) 100%);
+    background: linear-gradient(180deg,var(--midnight) 0%, var(--darkteal) 100%);
 }
 
 #MIF-cover {
@@ -383,22 +386,23 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     margin: 1em;
-    color: var(--pop);
-    text-shadow: 2px 2px 5px var(--darkest)
+    color: var(--berry);
+    text-shadow: 2px 2px 5px var(--midnight)
 }
 
 p {
     font-family: transducer-variable, sans-serif;
-    width: 50;
+    font-variation-settings: "slnt" 0, "wdth" 75, "wght" 500;
+    font-size: 14pt;
     margin: 2em;
     margin-top: 0;
-    color: var(--darkest);
+    color: var(--midnight);
     text-align: left;
 }
 
 button {
-    background-color: var(--pop);
-    color: var(--lightest);
+    background-color: var(--berry);
+    color: var(--ivory);
     border: none;
     border-radius: 500px;
     font-family: transducer-variable, sans-serif;
@@ -406,12 +410,12 @@ button {
     font-size: larger;
     padding: .5em 2em;
     margin-bottom: 1em;
-    box-shadow: 2px 2px 2px var(--darkest);
+    box-shadow: 2px 2px 2px var(--midnight);
     cursor: pointer;
 }
 
 #mail-form label {
-    color: var(--darkest);
+    color: var(--midnight);
     margin-left: 0;
     }
 
@@ -436,7 +440,6 @@ button {
 
 .book-selector img {
     width: 100%;
-    margin-bottom: -2%;
 }
 
 .selector {
@@ -446,8 +449,9 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 2px 2px 2px var(--darkest);
+    box-shadow: 2px 2px 2px var(--midnight);
     padding: 0;
+    margin-bottom: 0;
 }
 
 .book-selector h2 {
@@ -455,24 +459,26 @@ button {
     font-weight: 600;
     text-align: center;
     font-size: xx-large;
-    color: var(--darkest);
+    color: var(--midnight);
+    margin: 0;
 }
 
 .selected {
     border-radius: 0;
     height: 100%;
     width: 105%;
-    background-color: var(--transteal);
-    box-shadow: 2px 2px 2px var(--darkest);
+    background-color: var(--transmidteal);
+    box-shadow: 2px 2px 2px var(--midnight);
     padding: 0;
     z-index: 2;
+    margin-bottom: 0;
 }
 
 /* About Page */
 .about {
     display: grid;
     grid-template-columns: 1.5fr 2fr;
-    background: linear-gradient(180deg,var(--darkest) 0%, var(--darkteal) 100%);
+    background: linear-gradient(180deg,var(--midnight) 0%, var(--darkteal) 100%);
 }
 .author-image {
     background-color: var(--lightteal);
@@ -481,19 +487,19 @@ button {
     height: fit-content;
     transform: rotate(-16deg);
     padding-bottom: 4em;
-    box-shadow: 4px 4px 8px var(--darkest);
+    box-shadow: 4px 4px 8px var(--midnight);
 }
 .author-image img{
     width: 100%;
     max-width: 800px;
     height: auto;
-    box-shadow: 2px 2px 4px var(--darkest);
+    box-shadow: 2px 2px 4px var(--midnight);
 }
 .author-blurb {
     background-color: var(--translteal);
     margin: 2em;
     border-radius: 4px;
-    box-shadow: 4px 4px 8px var(--darkest);
+    box-shadow: 4px 4px 8px var(--midnight);
 }
 
 @media screen and (max-width: 700px) {
@@ -515,7 +521,7 @@ button {
 #contact-page {
     display: flex;
     flex-direction: row;
-    background: linear-gradient(180deg,var(--teal) 0%, var(--lightteal) 100%);
+    background: linear-gradient(180deg,var(--midteal) 0%, var(--lightteal) 100%);
 }
 
 .contact-blurb {
@@ -534,7 +540,7 @@ button {
     margin: 2rem;
     background-color: var(--darkteal);
     border-radius: 4px;
-    box-shadow: 4px 4px 8px var(--darkest);
+    box-shadow: 4px 4px 8px var(--midnight);
     min-width: 40%;
 }
 
@@ -551,13 +557,19 @@ textarea {
     margin: 0;
     margin-bottom: 1rem;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 4px;
-    box-shadow: 2px 2px 4px var(--darkest) inset;
+    box-shadow: 2px 2px 4px var(--midnight) inset;
     box-sizing: border-box;
     background-color: var(--lightteal);
-    border-color: var(--darkest);
+    border-color: var(--midnight);
     height: 8rem;
+    font-family: transducer-variable, sans-serif;
+    font-size: small;
+}
+
+textarea::placeholder {
+    color: var(--darkteal);
 }
 
 @media screen and (max-width: 700px) {
@@ -595,7 +607,7 @@ textarea {
 /* Characters & World */
 
 .explore-page {
-    background: linear-gradient(180deg,var(--lightest) 0%, var(--pop) 100%);
+    background: linear-gradient(180deg,var(--ivory) 0%, var(--berry) 100%);
     display: flex;
     flex-direction: column;
 }
@@ -606,19 +618,19 @@ textarea {
     flex-direction: row;
     margin: 4rem;
     margin-top: 0;
-    box-shadow: 4px 4px 4px var(--darkest);
+    box-shadow: 4px 4px 4px var(--midnight);
 }
 
 .card img {
     max-height: 50vh;
     margin: 2em;
-    background-color: var(--lightest);
-    box-shadow: 4px 4px 4px var(--darkest);
+    background-color: var(--ivory);
+    box-shadow: 4px 4px 4px var(--midnight);
 }
 
 h2 {
     font-family: transducer-variable, sans-serif;
-    color: var(--darkest);
+    color: var(--midnight);
     margin-left: 2rem;
 }
 
