@@ -431,6 +431,22 @@ button {
     cursor: pointer;
 }
 
+.button {
+    display: block;
+    background-color: var(--berry);
+    color: var(--ivory);
+    border: none;
+    border-radius: 500px;
+    font-family: transducer-variable, sans-serif;
+    font-weight: 700;
+    font-size: larger;
+    padding: .5em 2em;
+    margin-bottom: 1em;
+    box-shadow: 2px 2px 2px var(--midnight);
+    cursor: pointer;
+    text-decoration: none;
+}
+
 #mail-form label {
     color: var(--midnight);
     margin-left: 0;

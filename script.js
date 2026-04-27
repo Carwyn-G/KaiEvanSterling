@@ -77,7 +77,7 @@ let ciwSynopsis = `
         <p>When Felri wakes up underground, he’s forced to dig his way out of his own grave. Unable to go back to his old life, he scrambles to make sense of why he isn’t staying dead. He soon finds himself pushed into a dangerous job as a royal guard for the heir to the throne. He has no idea what he’s doing, the heir is nothing like he expected, and a sinister plot is unfolding in the castle.</p>
         <p>With just days before the heir’s official coronation, and a looming threat Felri’s expected to block with his own mysteriously immortal life, he quickly realizes that protecting the heir is far more than just a job to him.</p>
       </div>
-      <a href="buyciw.html"><button type="button">Buy Now</button></a>
+      <a href="buyciw.html" target="_blank" class="button">Buy Now</a>
       <div class="book-selector">
         <button onclick="selectBook(this.id)" class="selected" id="CIW"><img src="images/CIW/3D-book.png" alt="The hardcover book 'the Crown is Waiting'" class="selectimg"></button>
         <button onclick="selectBook(this.id)" class="selector" id="KIW"><img src="images/KIW/3D-book.png" alt="The hardcover book 'the Kingdom is Watching'"  class="selectimg"></button>
@@ -91,7 +91,7 @@ let kiwSynopsis = `
         <p>Now engaged to the youngest Queen to ever rule Astuna and already world famous for his role as a guard, Felri finds himself thrust into a spotlight he never asked for, all while having to keep the engagement a secret from the whole country. With Sievert behind bars awaiting a trial for his role in the coronation disaster, Torin’s uncle is serving as King. But tensions are still running high in the castle and throughout the country.</p>
         <p>Torin wants to go ahead with the wedding that’ll put Felri on the throne as soon as possible, but first he’ll need a crash course in all the skills a king needs to rule.</p>
       </div>
-      <a href="buykiw.html" target="_blank"><button type="button">Buy Now</button></a>
+      <a href="buykiw.html" target="_blank" class="button">Buy Now</a>
       <div class="book-selector">
         <button onclick="selectBook(this.id)" class="selector" id="CIW"><img src="images/CIW/3D-book.png" alt="The hardcover book 'the Crown is Waiting'" class="selectimg"></button>
         <button onclick="selectBook(this.id)" class="selected" id="KIW"><img src="images/KIW/3D-book.png" alt="The hardcover book 'the Kingdom is Watching'"  class="selectimg"></button>
