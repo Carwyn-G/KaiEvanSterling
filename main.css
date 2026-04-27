@@ -79,6 +79,7 @@ nav {
     margin: 0;
     padding: 0;
     max-height: 2em;
+    border-radius: 0;
 }
 
 .topnav button:hover {
@@ -182,7 +183,7 @@ ul a:active {
 
     #submenu ul {
         position: absolute;
-        top: 11.5rem;
+        top: 8.5rem;
     }
 }
 
