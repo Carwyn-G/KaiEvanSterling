@@ -403,7 +403,8 @@ h1 {
     font-size: 32pt;
     text-transform: uppercase;
     text-align: center;
-    margin: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
     color: var(--berry);
     text-shadow: 2px 2px 5px var(--midnight)
 }
